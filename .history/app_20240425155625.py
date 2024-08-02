@@ -12,9 +12,9 @@ st.set_page_config(
 )
 
 # page title
-st.title(page_title)
+# st.title(page_title)
 
-# st.markdown("#### Select an image file to analyze.")
+st.markdown("#### S.")
 
 # displays file upload widget
 # uploaded_file = st.file_uploader("Choose image file", type=['png', 'jpg', 'jpeg'] )
@@ -22,7 +22,7 @@ st.title(page_title)
 # sets up sidebar nav widgets
 with st.sidebar:   
     # creates selectbox to pick the model we would like to use
-    image_model = st.selectbox('Which model would you like to use?', Config.OLLAMA_MODELS)
+    image_model = st.selectbox('Which image model would you like to use?', Config.OLLAMA_MODELS)
 
 if chat_input := st.chat_input("What would you like to ask?"):
     # if uploaded_file is None:
@@ -38,4 +38,4 @@ if chat_input := st.chat_input("What would you like to ask?"):
        
         stream_output = st.write_stream(stream_parser(stream))
 
-        st.write(":green[Done]")
+        st.write(":green[Done analyzing image file]")

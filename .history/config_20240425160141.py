@@ -4,7 +4,7 @@ https://www.youtube.com/@DevTechBytes
 """
 
 class Config:
-    PAGE_TITLE = "Text generation, translation, summarization and image analyzer Bot"
+    PAGE_TITLE = " text generation, translation, summarization and mage analyzer Bot"
 
     OLLAMA_MODELS = (
         'llava:13b', 

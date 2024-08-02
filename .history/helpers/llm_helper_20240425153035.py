@@ -4,7 +4,7 @@ https://www.youtube.com/@DevTechBytes
 """
 from ollama import generate
 from config import Config
-# from helpers.image_helper import get_image_bytes
+from helpers.image_helper import get_image_bytes
 
 system_prompt = Config.SYSTEM_PROMPT
 
@@ -34,20 +34,20 @@ system_prompt = Config.SYSTEM_PROMPT
 
 # system_prompt = Config.SYSTEM_PROMPT
 
-def analyze_image_file(user_prompt, model):
-    # calls the Mistral model using Ollama SDK
-    stream = generate(model=model, 
-                      prompt=user_prompt, 
-                      stream=True)
+# def ask_mistral(question, model):
+#     # calls the Mistral model using Ollama SDK
+#     stream = generate(model=model, 
+#                       prompt=question, 
+#                       stream=True)
 
-    return stream
+#     return stream
 
-# handles stream response back from LLM
-def stream_parser(stream):
-    for chunk in stream:
-        yield chunk['response']
+# # handles stream response back from LLM
+# def stream_parser(stream):
+#     for chunk in stream:
+#         yield chunk['response']
 
-def get_answer(question, model):
-    stream = analyze_image_file(question, model)
-    answers = [answer for answer in stream_parser(stream)]
-    return answers[0]  # return the first answer
+# def get_answer(question, model):
+#     stream = ask_mistral(question, model)
+#     answers = [answer for answer in stream_parser(stream)]
+#     return answers[0]  # return the first answer

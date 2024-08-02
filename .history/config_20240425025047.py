@@ -4,13 +4,13 @@ https://www.youtube.com/@DevTechBytes
 """
 
 class Config:
-    PAGE_TITLE = "Text generation, translation, summarization and image analyzer Bot"
+    PAGE_TITLE = "LLava Image Analyzer"
 
     OLLAMA_MODELS = (
-        'llava:13b', 
-        'llava:34b', 
-        'bakllava',
-        'mistral:instruct'
+        # 'llava:13b', 
+        # 'llava:34b', 
+        # 'bakllava'
+        
         )
 
     SYSTEM_PROMPT = f"""You are a helpful chatbot that has access to the following 

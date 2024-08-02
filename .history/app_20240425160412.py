@@ -38,4 +38,4 @@ if chat_input := st.chat_input("What would you like to ask?"):
        
         stream_output = st.write_stream(stream_parser(stream))
 
-        st.write(":green[Done]")
+        st.write(":green[Done analyzing image file]")

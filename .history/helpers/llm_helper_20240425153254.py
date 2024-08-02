@@ -34,10 +34,10 @@ system_prompt = Config.SYSTEM_PROMPT
 
 # system_prompt = Config.SYSTEM_PROMPT
 
-def analyze_image_file(user_prompt, model):
+def analyze_image_file(question, model):
     # calls the Mistral model using Ollama SDK
     stream = generate(model=model, 
-                      prompt=user_prompt, 
+                      prompt=question, 
                       stream=True)
 
     return stream

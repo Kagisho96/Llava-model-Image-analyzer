@@ -34,10 +34,10 @@ system_prompt = Config.SYSTEM_PROMPT
 
 # system_prompt = Config.SYSTEM_PROMPT
 
-def analyze_image_file(user_prompt, model):
+def (question, model):
     # calls the Mistral model using Ollama SDK
     stream = generate(model=model, 
-                      prompt=user_prompt, 
+                      prompt=question, 
                       stream=True)
 
     return stream
@@ -48,6 +48,6 @@ def stream_parser(stream):
         yield chunk['response']
 
 def get_answer(question, model):
-    stream = analyze_image_file(question, model)
+    stream = ask_mistral(question, model)
     answers = [answer for answer in stream_parser(stream)]
     return answers[0]  # return the first answer
