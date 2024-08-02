@@ -1,6 +1,6 @@
 # LLava Image Analyzer
 
-This repo is a companion to the YouTube video <a href="https://youtu.be/1IosVm-OERs">Llava, Ollama and Streamlit 
+Llava, Ollama and Streamlit 
 
 
 ## Chatbot Features include:
