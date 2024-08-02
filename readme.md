@@ -16,3 +16,4 @@ git clone -b starter_project https://github.com/DevTechBytes/LLava-Image-Analyze
 - Ability to chat about the uploaded image
 
 # Llava-model-image-analyzer
+# Llava-model-image-analyzer
